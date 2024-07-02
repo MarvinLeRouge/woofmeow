@@ -1,6 +1,11 @@
 # WoofMeow
 
+---
+
 **In English**
+
+---
+
 ## Description
 
 WoofMeow ([Licence WTFPL](https://fr.wikipedia.org/wiki/WTFPL)) is a web application web for vets and pet owners. Its primary purpose is to allow vets to monitor their clients, followed animals, visits, prescriptions and vaccinations. It also allows customers to have their pets medical history at a glance, as well as automated reminders for vaccination dates
