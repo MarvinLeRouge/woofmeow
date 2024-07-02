@@ -10,7 +10,9 @@ WoofMeow is based on Symfony, and uses (for now) the MailTrap service for email 
 
 
 ---
+
 **In French**
+
 ---
 
 ## Description
