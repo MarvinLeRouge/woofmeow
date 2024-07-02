@@ -9,7 +9,10 @@ WoofMeow ([Licence WTFPL](https://fr.wikipedia.org/wiki/WTFPL)) is a web applica
 WoofMeow is based on Symfony, and uses (for now) the MailTrap service for email management.
 
 
+---
 **In French**
+---
+
 ## Description
 
 WoofMeow ([Licence WTFPL](https://fr.wikipedia.org/wiki/WTFPL)) est une application web destinée aux vétérinaires et aux possesseurs d'animaux domestiques. Elle permet aux vétérinaires d'effectuer le suivi de leur clientèle, des animaux, visites, prescriptions et vaccinations. Elle permet également aux clients d'avoir un suivi de leurs animaux et des informations les concernant, ainsi que des rappels automatisés pour les dates de vaccination.
