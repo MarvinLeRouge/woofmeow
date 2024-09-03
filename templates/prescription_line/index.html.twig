@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PrescriptionLine index{% endblock %}
+
+{% block body %}
+    <h1>PrescriptionLine index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>DrugName</th>
+                <th>BatchNumber</th>
+                <th>Dosage</th>
+                <th>Unit</th>
+                <th>Frequency</th>
+                <th>StartDate</th>
+                <th>EndDate</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for prescription_line in prescription_lines %}
+            <tr>
+                <td>{{ prescription_line.id }}</td>
+                <td>{{ prescription_line.drugName }}</td>
+                <td>{{ prescription_line.batchNumber }}</td>
+                <td>{{ prescription_line.dosage }}</td>
+                <td>{{ prescription_line.unit }}</td>
+                <td>{{ prescription_line.frequency }}</td>
+                <td>{{ prescription_line.startDate ? prescription_line.startDate|date('Y-m-d') : '' }}</td>
+                <td>{{ prescription_line.endDate ? prescription_line.endDate|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_prescription_line_show', {'id': prescription_line.id}) }}">show</a>
+                    <a href="{{ path('app_prescription_line_edit', {'id': prescription_line.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_prescription_line_new') }}">Create new</a>
+{% endblock %}

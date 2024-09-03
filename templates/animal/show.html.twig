@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Animal{% endblock %}
+
+{% block body %}
+    <h1>Animal</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ animal.id }}</td>
+            </tr>
+            <tr>
+                <th>Species</th>
+                <td>{{ animal.species }}</td>
+            </tr>
+            <tr>
+                <th>Breed</th>
+                <td>{{ animal.breed }}</td>
+            </tr>
+            <tr>
+                <th>Sex</th>
+                <td>{{ animal.sex }}</td>
+            </tr>
+            <tr>
+                <th>Sterilized</th>
+                <td>{{ animal.sterilized ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Tattoo</th>
+                <td>{{ animal.tattoo }}</td>
+            </tr>
+            <tr>
+                <th>ChipNumber</th>
+                <td>{{ animal.chipNumber }}</td>
+            </tr>
+            <tr>
+                <th>BirthDate</th>
+                <td>{{ animal.birthDate ? animal.birthDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>DeathDate</th>
+                <td>{{ animal.deathDate ? animal.deathDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>NextVisitDate</th>
+                <td>{{ animal.nextVisitDate ? animal.nextVisitDate|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_animal_index') }}">back to list</a>
+
+    <a href="{{ path('app_animal_edit', {'id': animal.id}) }}">edit</a>
+
+    {{ include('animal/_delete_form.html.twig') }}
+{% endblock %}

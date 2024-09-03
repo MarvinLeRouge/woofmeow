@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PrescriptionLine{% endblock %}
+
+{% block body %}
+    <h1>PrescriptionLine</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ prescription_line.id }}</td>
+            </tr>
+            <tr>
+                <th>DrugName</th>
+                <td>{{ prescription_line.drugName }}</td>
+            </tr>
+            <tr>
+                <th>BatchNumber</th>
+                <td>{{ prescription_line.batchNumber }}</td>
+            </tr>
+            <tr>
+                <th>Dosage</th>
+                <td>{{ prescription_line.dosage }}</td>
+            </tr>
+            <tr>
+                <th>Unit</th>
+                <td>{{ prescription_line.unit }}</td>
+            </tr>
+            <tr>
+                <th>Frequency</th>
+                <td>{{ prescription_line.frequency }}</td>
+            </tr>
+            <tr>
+                <th>StartDate</th>
+                <td>{{ prescription_line.startDate ? prescription_line.startDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>EndDate</th>
+                <td>{{ prescription_line.endDate ? prescription_line.endDate|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_prescription_line_index') }}">back to list</a>
+
+    <a href="{{ path('app_prescription_line_edit', {'id': prescription_line.id}) }}">edit</a>
+
+    {{ include('prescription_line/_delete_form.html.twig') }}
+{% endblock %}
