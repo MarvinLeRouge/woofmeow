@@ -168,4 +168,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
+    /*
+    public function __toString(): string
+    {
+       return $this->roles; // à modifier avec le truc qui pose problème
+    }
+    */
+
 }
+
